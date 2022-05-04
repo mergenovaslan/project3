@@ -1,0 +1,17 @@
+
+
+{% block content %}
+  {% load static %}
+<form action= '{%url "registration"%}' method = "post">
+  {% csrf_token %}
+  {% for f in form %}
+  <p><label class="form-label">{{f.label}} </label> <br>{{f}} </p>
+ <div class="form-error">{{ f.errors }}</div>
+  {% endfor %}
+<button type="submit" class="btn btn-success">log in</button>
+</form>
+{% endblock %}
+
+
+
+

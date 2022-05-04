@@ -1,0 +1,1 @@
+web gunicorn asikow.wsgi:application --log-file -
